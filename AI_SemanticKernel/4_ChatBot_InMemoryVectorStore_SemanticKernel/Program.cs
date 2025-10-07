@@ -11,16 +11,15 @@ using Microsoft.SemanticKernel.Embeddings;
 #pragma warning disable SKEXP0001
 #pragma warning disable SKEXP0001
 
-string _openaiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.User);
 
 var builder = Kernel.CreateBuilder();
 builder.Services.AddLogging(b => b.AddConsole().SetMinimumLevel(LogLevel.Trace));
 
-(string model, string endpoint, string apiKey, string orgId) = EnvService.ReadFromEnvironment(AISource.OpenAI);
+(string model, string endpoint, string apiKey, string embedding, string orgId) = EnvService.ReadFromEnvironment(AISource.OpenAI);
 
 //Chat completion service
-builder.AddOpenAIChatCompletion(model, _openaiKey);
-builder.AddOpenAITextEmbeddingGeneration("text-embedding-ada-002", _openaiKey);
+builder.AddOpenAIChatCompletion(model, apiKey);
+builder.AddOpenAITextEmbeddingGeneration(embedding, apiKey);
 
 var kernel = builder.Build();
 

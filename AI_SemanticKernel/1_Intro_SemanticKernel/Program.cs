@@ -2,7 +2,7 @@
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 
-(string model, string endpoint, string apiKey, string orgId) = EnvService.ReadFromEnvironment(AISource.Ollama);
+(string model, string endpoint, string apiKey, string embedding, string orgId) = EnvService.ReadFromEnvironment(AISource.Ollama);
 
 var builder = Kernel.CreateBuilder();
 

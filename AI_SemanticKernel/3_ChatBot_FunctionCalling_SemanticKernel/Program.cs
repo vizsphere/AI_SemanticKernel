@@ -7,7 +7,7 @@ using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 
 
-(string model, string endpoint, string apiKey, string orgId) = EnvService.ReadFromEnvironment(AISource.OpenAI);
+(string model, string endpoint, string apiKey, string embedding, string orgId) = EnvService.ReadFromEnvironment(AISource.OpenAI);
 
 var builder = Kernel.CreateBuilder();
 builder.Services.AddLogging(b => b.AddConsole().SetMinimumLevel(LogLevel.Trace));

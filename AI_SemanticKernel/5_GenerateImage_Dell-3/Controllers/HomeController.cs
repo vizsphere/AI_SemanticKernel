@@ -4,14 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.AI;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
-using Microsoft.SemanticKernel.Embeddings;
 using Microsoft.SemanticKernel.TextToImage;
 using System.Diagnostics;
 using System.Numerics.Tensors;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 #pragma warning disable SKEXP0001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
-#pragma warning disable CS0618 // Type or member is obsolete
+
 
 namespace _5_GenerateImage_Dell_3.Controllers
 {
@@ -25,7 +23,7 @@ namespace _5_GenerateImage_Dell_3.Controllers
         public HomeController(Kernel kernel, ILogger<HomeController> logger)
         {
             _logger = logger;
-            _kernel = kernel;   
+            _kernel = kernel;
             _dalE = _kernel.GetRequiredService<ITextToImageService>();
             _embeddingGenerator = kernel.GetRequiredService<IEmbeddingGenerator<string, Embedding<float>>>();
         }
@@ -53,7 +51,7 @@ namespace _5_GenerateImage_Dell_3.Controllers
             var random = new Random().Next(0, 200);
             var imageDescriptionResult = await _kernel.InvokeAsync(genImgDescription, new() { ["input"] = random });
             var imageDescription = imageDescriptionResult.ToString();
-            
+
             model.OriginalImageDescription = imageDescription;
 
             // Use DALL-E 3 to generate an image. OpenAI in this case returns a URL (though you can ask to return a base64 image)
@@ -68,7 +66,7 @@ namespace _5_GenerateImage_Dell_3.Controllers
             var origVector = origEmbedding.First().Vector;
             var guessVector = guessEmbedding.First().Vector;
             var similarity = TensorPrimitives.CosineSimilarity(origVector.Span, guessVector.Span);
-            
+
             model.SimilarityScore = similarity;
 
             model.GuessDescription = $"{Utils.WordWrap(model.UserGuess, 90)}\n";

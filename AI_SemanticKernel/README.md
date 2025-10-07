@@ -12,6 +12,7 @@ Use power shell to set environment variables
 [Environment]::SetEnvironmentVariable("OPEN_AI_MODEL", "sk-YOUR_MODELNAME", "User")
 [Environment]::SetEnvironmentVariable("OPEN_AI_ENDPOINT", "sk-YOUR_ENDPOINT_", "User")
 [Environment]::SetEnvironmentVariable("OPEN_AI_ORGID", "sk-YOUR_ORGID", "User")
+[Environment]::SetEnvironmentVariable("OPEN_AI_EMBEDDING", "text-embedding-ada-002", "User")
 
 ```
 
@@ -22,6 +23,7 @@ Use power shell to set environment variables
 [Environment]::SetEnvironmentVariable("AZURE_OPEN_AI_MODEL", "sk-YOUR_MODELNAME", "User")
 [Environment]::SetEnvironmentVariable("AZURE_OPEN_AI_ENDPOINT", "sk-YOUR_ENDPOINT_", "User")
 [Environment]::SetEnvironmentVariable("AZURE_OPEN_AI_ORGID", "sk-YOUR_ORGID", "User")
+[Environment]::SetEnvironmentVariable("AZURE__OPEN_AI_EMBEDDING", "text-embedding-ada-002", "User")
 
 ```
 
