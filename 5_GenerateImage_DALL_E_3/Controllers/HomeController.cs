@@ -37,7 +37,12 @@ namespace _5_GenerateImage_DALL_E_3.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(DALModel model)
         {
-            var prompt = $@"{model.Prompt} {{$input}}.";
+            var promptContext = "You're chatting with a user. Instead of replying directly to the user"
+                                  + " provide a description of a  image that expresses what you want to say."
+                                  + " The user will see your message and the image."
+                                  + " Describe the image with details in one sentence.";
+
+            var prompt = $@"{promptContext} usermessage: {model.Prompt} {{$input}}.";
 
             var executionSettings = new OpenAIPromptExecutionSettings
             {
@@ -58,7 +63,7 @@ namespace _5_GenerateImage_DALL_E_3.Controllers
             model.ImageUrl = await _dalE.GenerateImageAsync(imageDescription.Trim(), 1024, 1024);
 
 
-            var guess = model.UserGuess ?? "Ice cream";
+            var guess = model.UserGuess;
 
             var origEmbedding = await _embeddingGenerator.GenerateAsync(new List<string> { imageDescription });
             var guessEmbedding = await _embeddingGenerator.GenerateAsync(new List<string> { guess });
