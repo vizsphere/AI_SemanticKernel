@@ -8,7 +8,7 @@ using Microsoft.SemanticKernel.TextToImage;
 using System.Diagnostics;
 using System.Numerics.Tensors;
 
-#pragma warning disable SKEXP0001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+#pragma warning disable SKEXP0001 
 
 
 namespace _5_GenerateImage_DALL_E_3.Controllers
