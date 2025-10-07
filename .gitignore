@@ -25,3 +25,17 @@
 /AI_SemanticKernel/5_GenerateImage_Dell-3
 /AI_SemanticKernel/5_GenerateImage_DALL_E_3/bin/Debug/net9.0
 /AI_SemanticKernel/5_GenerateImage_DALL_E_3/obj
+/.vs/AI_SemanticKernel
+/0_Configs/bin/Debug/net9.0
+/0_Configs/obj
+/1_Intro_SemanticKernel/bin/Debug/net9.0
+/1_Intro_SemanticKernel/obj
+/2_ChatBot_SemanticKernel/bin/Debug/net9.0
+/2_ChatBot_SemanticKernel/obj
+/3_ChatBot_FunctionCalling_SemanticKernel/bin/Debug/net9.0
+/3_ChatBot_FunctionCalling_SemanticKernel/obj
+/4_ChatBot_InMemoryVectorStore_SemanticKernel/bin/Debug/net9.0
+/4_ChatBot_InMemoryVectorStore_SemanticKernel/obj
+/5_GenerateImage_DALL_E_3/obj
+/6_GenerateImage_using_ChatGPT_DALL_E_3/bin/Debug/net9.0
+/6_GenerateImage_using_ChatGPT_DALL_E_3/obj
