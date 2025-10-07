@@ -1,5 +1,5 @@
-using _5_GenerateImage_Dell_3.Models;
-using _5_GenerateImage_Dell_3.Utilities;
+using _5_GenerateImage_DALL_E_3.Models;
+using _5_GenerateImage_DALL_E_3.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.AI;
 using Microsoft.SemanticKernel;
@@ -11,7 +11,7 @@ using System.Numerics.Tensors;
 #pragma warning disable SKEXP0001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
 
 
-namespace _5_GenerateImage_Dell_3.Controllers
+namespace _5_GenerateImage_DALL_E_3.Controllers
 {
     public class HomeController : Controller
     {

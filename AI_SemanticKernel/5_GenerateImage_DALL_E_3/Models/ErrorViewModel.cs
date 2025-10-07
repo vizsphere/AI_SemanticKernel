@@ -1,4 +1,4 @@
-namespace _5_GenerateImage_Dell_3.Models
+namespace _5_GenerateImage_DALL_E_3.Models
 {
     public class ErrorViewModel
     {

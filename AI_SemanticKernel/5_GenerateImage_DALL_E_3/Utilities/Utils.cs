@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace _5_GenerateImage_Dell_3.Utilities
+namespace _5_GenerateImage_DALL_E_3.Utilities
 {
     public static class Utils
     {
