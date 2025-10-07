@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		readMe.txt = readMe.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_Inline_Fun_SemanticKernel", "1_Intro_SemanticKernel\1_Inline_Fun_SemanticKernel.csproj", "{2DD08AE6-4E3D-484D-A3D6-C9C27D5A730E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_ChatBot_SemanticKernel", "2_ChatBot_SemanticKernel\2_ChatBot_SemanticKernel.csproj", "{387BF2A4-C41D-4944-98F6-94BC33E6398C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_ChatBot_FunctionCalling_SemanticKernel", "3_ChatBot_FunctionCalling_SemanticKernel\3_ChatBot_FunctionCalling_SemanticKernel.csproj", "{1AB7B90C-F75D-4755-B2D8-9A9CE2495AC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Configs", "0_Configs\_Configs.csproj", "{D9335FA0-E276-4EB5-81CC-338EC3CA8E56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_GenerateImage_Dell-3", "5_GenerateImage_Dell-3\5_GenerateImage_Dell-3.csproj", "{408849D3-DB65-A985-1041-4AB3DD0CB552}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_ChatBot_InMemoryVectorStore_SemanticKernel", "4_ChatBot_InMemoryVectorStore_SemanticKernel\4_ChatBot_InMemoryVectorStore_SemanticKernel.csproj", "{8822CB1D-055B-DCD1-8317-41002CAE84B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DD08AE6-4E3D-484D-A3D6-C9C27D5A730E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD08AE6-4E3D-484D-A3D6-C9C27D5A730E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD08AE6-4E3D-484D-A3D6-C9C27D5A730E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD08AE6-4E3D-484D-A3D6-C9C27D5A730E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{387BF2A4-C41D-4944-98F6-94BC33E6398C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{387BF2A4-C41D-4944-98F6-94BC33E6398C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{387BF2A4-C41D-4944-98F6-94BC33E6398C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{387BF2A4-C41D-4944-98F6-94BC33E6398C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AB7B90C-F75D-4755-B2D8-9A9CE2495AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB7B90C-F75D-4755-B2D8-9A9CE2495AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB7B90C-F75D-4755-B2D8-9A9CE2495AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB7B90C-F75D-4755-B2D8-9A9CE2495AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9335FA0-E276-4EB5-81CC-338EC3CA8E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9335FA0-E276-4EB5-81CC-338EC3CA8E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9335FA0-E276-4EB5-81CC-338EC3CA8E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9335FA0-E276-4EB5-81CC-338EC3CA8E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{408849D3-DB65-A985-1041-4AB3DD0CB552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408849D3-DB65-A985-1041-4AB3DD0CB552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408849D3-DB65-A985-1041-4AB3DD0CB552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408849D3-DB65-A985-1041-4AB3DD0CB552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8822CB1D-055B-DCD1-8317-41002CAE84B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8822CB1D-055B-DCD1-8317-41002CAE84B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8822CB1D-055B-DCD1-8317-41002CAE84B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8822CB1D-055B-DCD1-8317-41002CAE84B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {737A8E75-8F24-4779-B43C-100DCE45F86C}
+	EndGlobalSection
+EndGlobal

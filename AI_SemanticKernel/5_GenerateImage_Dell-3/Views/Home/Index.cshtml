@@ -1,0 +1,38 @@
+﻿@model _5_GenerateImage_Dell_3.Models.DALModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-6">
+        <form method="post">
+            <div class="form-group">
+                <div>
+                    <span class="label label-primary">Prompt to generate image</span>
+                    <input asp-for="Prompt" value="flying robin over water" maxlength="90" class="form-control" />
+                </div>
+                
+                <div>
+                    <span class="label label-primary">User random guess about image</span>
+                    <input asp-for="UserGuess" value="Ice cream" maxlength="90" class="form-control" />
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Generate Image</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-6">
+        <p> Original Prompt : @Model.Prompt </p>
+        <p> Revised Prompt : @Model.RevisedPrompt </p>
+        <p> Original Image Description : @Model.OriginalImageDescription</p>
+        <p> Uer Guess Description : @Model.GuessDescription</p>
+        <p class="alert alert-warning">SimilarityScore : @Model.SimilarityScore</p>
+        <hr />
+        <img src="@Model.ImageUrl" class="img-fluid" />
+    </div>
+
+</div>
+
+

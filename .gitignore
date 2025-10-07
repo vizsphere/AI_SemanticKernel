@@ -1,0 +1,25 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AI_SemanticKernel/0_Configs/obj
+/AI_SemanticKernel/0_Configs/bin/Debug/net9.0
+/AI_SemanticKernel/.vs/ProjectEvaluation
+/AI_SemanticKernel/.vs/AI_SemanticKernel
+/AI_SemanticKernel/1_Intro_SemanticKernel/bin/Debug/net9.0
+/AI_SemanticKernel/1_Intro_SemanticKernel/obj
+/AI_SemanticKernel/2_ChatBot_SemanticKernel/bin/Debug/net9.0
+/AI_SemanticKernel/2_ChatBot_SemanticKernel/obj
+/AI_SemanticKernel/3_ChatBot_FunctionCalling_SemanticKernel/bin/Debug/net9.0
+/AI_SemanticKernel/3_ChatBot_FunctionCalling_SemanticKernel/obj
+/AI_SemanticKernel/4_GenerateImage_Dell-3/bin/Debug/net9.0
+/AI_SemanticKernel/4_GenerateImage_Dell-3/obj/Debug/net9.0
+/AI_SemanticKernel/4_GenerateImage_Dell-3/obj
+/AI_SemanticKernel/AI_Configurations/bin/Debug/net9.0
+/AI_SemanticKernel/AI_Configurations/obj
+/AI_SemanticKernel/ChatBot_Vector_Embeddings_SemanticKernel/bin/Debug/net9.0
+/AI_SemanticKernel/ChatBot_Vector_Embeddings_SemanticKernel/obj/Debug/net9.0
+/AI_SemanticKernel/ChatBot_Vector_Embeddings_SemanticKernel/obj
+/AI_SemanticKernel/4_ChatBot_InMemoryVectorStore_SemanticKernel/bin/Debug/net9.0
+/AI_SemanticKernel/4_ChatBot_InMemoryVectorStore_SemanticKernel/obj
+/AI_SemanticKernel/5_GenerateImage_Dell-3
