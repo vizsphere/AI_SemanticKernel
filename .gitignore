@@ -43,3 +43,5 @@
 /6_RAG_using_BingSearch/obj
 /6_RAG_using_BingSearch/bin/Debug/net9.0
 /.vs/ProjectEvaluation
+/7_ElasticSearch_VectorStore_SemanticKernel/bin/Debug/net9.0
+/7_ElasticSearch_VectorStore_SemanticKernel/obj
