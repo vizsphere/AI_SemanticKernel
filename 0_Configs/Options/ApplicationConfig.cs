@@ -9,6 +9,7 @@ namespace _Configs.Options
     {
         private readonly OpenAIConfig _openAIConfig = new();
         private readonly OpenAIEmbeddingsConfig _openAIEmbeddingsConfig = new();
+        private readonly AzureAIConfig _azureAIConfig = new();
 
         public ApplicationConfig(ConfigurationManager configurationManager)
         {
@@ -18,9 +19,14 @@ namespace _Configs.Options
             configurationManager
                 .GetRequiredSection($"AIServices:{OpenAIEmbeddingsConfig.ConfigSectionName}")
                 .Bind(this._openAIEmbeddingsConfig);
+
+            configurationManager
+                .GetRequiredSection($"AIServices:{AzureAIConfig.ConfigSectionName}")
+                .Bind(this._azureAIConfig);
         }
 
         public OpenAIConfig OpenAIConfig => this._openAIConfig;
         public OpenAIEmbeddingsConfig OpenAIEmbeddingsConfig => this._openAIEmbeddingsConfig;
+        public AzureAIConfig AzureAIConfig => this._azureAIConfig;
     }
 }

@@ -78,9 +78,24 @@ https://github.com/mehmetozkaya/eshop-distributed/tree/main/src
 #### Vector Database using Sqllite membory store 
 https://www.jcreek.co.uk/web-dev/dotnet-csharp/semantic-kernel-vector-database/
 
+
+### Azure AI Foundry Agent Service
+https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview
+
+https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/tools/bing-grounding
+
+https://learn.microsoft.com/en-us/azure/ai-services/connect-services-ai-foundry-portal?context=%2Fazure%2Fai-foundry%2Fcontext%2Fcontext
+
+
 ### Random Links
 https://www.developerscantina.com/p/semantic-kernel-memory/
 https://www.developerscantina.com/p/semantic-kernel-memory/
 https://www.developerscantina.com/p/semantic-kernel-prompt-functions/
 https://www.developerscantina.com/p/semantic-kernel-memory/
 https://wearecommunity.io/communities/dotnetmexico/articles/6602
+
+
+https://api.bing.microsoft.com
+
+
+https://learn.microsoft.com/en-us/previous-versions/bing/search-apis/bing-web-search/quickstarts/rest/csharp

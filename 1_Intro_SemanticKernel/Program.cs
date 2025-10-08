@@ -2,11 +2,11 @@
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 
-(string model, string endpoint, string apiKey, string embedding, string orgId) = EnvService.ReadFromEnvironment(AISource.Ollama);
+(string model, string endpoint, string apiKey, string embedding, string orgId) = EnvService.ReadFromEnvironment(AISource.OpenAI);
 
 var builder = Kernel.CreateBuilder();
 
-builder.AddOllamaChatCompletion(model, new HttpClient() { BaseAddress = new Uri(endpoint) });
+builder.AddOpenAIChatCompletion(model, apiKey);
 
 var kernel = builder.Build();
 
