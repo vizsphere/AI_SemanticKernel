@@ -45,3 +45,7 @@
 /.vs/ProjectEvaluation
 /7_ElasticSearch_VectorStore_SemanticKernel/bin/Debug/net9.0
 /7_ElasticSearch_VectorStore_SemanticKernel/obj
+/7_ElasticSearch_VectorStore_SemanticKernel/appsettings.Development.json
+/7_ElasticSearch_VectorStore_SemanticKernel/appsettings.json
+/bin/Debug
+/obj
