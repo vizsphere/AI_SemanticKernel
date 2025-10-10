@@ -37,6 +37,7 @@ builder.Services.AddSingleton<ElasticsearchClient>(s =>
 {
     return new ElasticsearchClient(elasticsearchClientSettings);
 });
+
 builder.Services.AddSingleton<ISearchSettings>(settings);
 
 var app = builder.Build();

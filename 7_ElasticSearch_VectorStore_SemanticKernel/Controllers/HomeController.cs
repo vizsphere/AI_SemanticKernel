@@ -61,8 +61,12 @@ namespace _7_ElasticSearch_VectorStore_SemanticKernel.Controllers
                     string.Join("\n\n", response.Documents.Select(d => $"{d.Name} ({d.WebSite}): {d.Bio}")) :
                     "No results found.";
             }
+            else
+            {
+                terms.Response =  response.DebugInformation.ToString();
+            }
 
-            return View(terms);
+                return View(terms);
         }
 
         private async Task<SearchResponse<Speaker>> QueryVectorData(ReadOnlyMemory<float> queryVector)
