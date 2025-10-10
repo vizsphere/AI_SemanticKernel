@@ -83,7 +83,7 @@ namespace _7_ElasticSearch_VectorStore_SemanticKernel.Controllers
         public async Task<IActionResult> CreateEmbedding()
         {
             _logger.LogInformation("Creating Index");
-            //await _vectorStoreRecordCollection.CreateCollectionIfNotExistsAsync();
+            await _vectorStoreRecordCollection.CreateCollectionIfNotExistsAsync();
 
             var speakers = (await System.IO.File.ReadAllLinesAsync("speakers.csv"))
                 .Select(x => x.Split(';'));
