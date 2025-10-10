@@ -49,3 +49,4 @@
 /7_ElasticSearch_VectorStore_SemanticKernel/appsettings.json
 /bin/Debug
 /obj
+/7_ElasticSearch_VectorStore_SemanticKernel/appsettings.Development.json

@@ -5,7 +5,7 @@
 <div class="container">
     <form asp-controller="Home" asp-action="Index" method="post">
         <div class="form-group">
-            <label asp-for="@Model.Input">Q ></label>
+            <label asp-for="@Model.Input">Q: ></label>
             <input asp-for="@Model.Input" class="form-control" placeholder="Q:" />
         </div>
         <br />
@@ -19,17 +19,13 @@
                       name="@Model.Response" rows="20">@Model.Response</textarea>
         </div>
     </form>
-    <form asp-controller="Home" asp-action="CreateEmbedding" method="post">
-        <button class="btn btn-dark" type="submit">CreateEmbedding</button>
-        <div class="form-group">
-            @ViewData["Message"]
-        </div>
-    </form>
+
 
     <div class="form-control">
-        <span class="alert-info">Sample queries</span>
+        <span class="alert-info">Sample queries: </span>
+        <br/>
         <ol>
-            
+
             <li>AI researcher specializing in natural language processing and machine learning.</li>
             <li>Find Solution architect and enterprise software designer with expertise</li>
             <li>who is Samantha Rodriguez?</li>
@@ -38,6 +34,21 @@
             <li>3D</li>
         </ol>
     </div>
+
+    <br />
+
+    <form asp-controller="Home" asp-action="CreateEmbedding" method="post">
+        <div class="form-group">
+            <button class="btn btn-dark" type="submit">CreateEmbedding</button>
+        </div>
+        <div class="form-group">
+            <h4 class="alert">
+                @ViewData["Message"]
+            </h4>
+        </div>
+    </form>
+
+
 </div>
 <style>
     textarea {

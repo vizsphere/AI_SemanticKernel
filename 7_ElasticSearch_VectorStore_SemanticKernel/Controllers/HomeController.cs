@@ -41,8 +41,10 @@ namespace _7_ElasticSearch_VectorStore_SemanticKernel.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string message = null)
         {
+            ViewData["Message"] = message;
+
             return View(new SearchTerms());
         }
 
@@ -109,9 +111,8 @@ namespace _7_ElasticSearch_VectorStore_SemanticKernel.Controllers
             }
 
             _logger.LogInformation("Embedding created");
-            ViewData["Message"] = "Embedding created";
 
-            return Ok();
+            return RedirectToAction(nameof(Index), new { Message = "Embedding created" });
         }
         public IActionResult Privacy()
         {
