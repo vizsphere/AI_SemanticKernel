@@ -52,6 +52,54 @@ Once you see the screen with the prompt "Q:", you can start interacting with the
 4. Search for "motivational speaker" or "television host": This should return data based on the search terms, retrieving speakers that match those descriptions.
 _
 
+
+
+## Elastic Search with Semantic Kernel
+ 
+
+```
+
+PUT speaker_vector_index
+{
+  "mappings": {
+    "properties": {
+      "DefinitionEmbedding": {
+        "type": "dense_vector",
+        "dims": 1536,
+        "index": true
+      },
+      "Id": {
+        "type": "keyword"
+      },
+      "Name": {
+        "type": "text"
+      },
+      "Bio": {
+        "type": "text"
+      },
+      "WebSite": {
+        "type": "text"
+      }
+    }
+  }
+}
+
+```
+
+```
+
+GET /speaker_vector_index/_search
+{
+  "query": {
+    "match_all": {}
+   }
+}
+
+```
+
+
+
+
 ### Rag Sample App
 https://github.com/microsoft/semantic-kernel/blob/main/dotnet/samples/Demos/VectorStoreRAG/appsettings.json
 

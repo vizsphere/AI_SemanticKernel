@@ -84,7 +84,6 @@ namespace _7_ElasticSearch_VectorStore_SemanticKernel.Controllers
                         DefinitionEmbedding = descriptionEmbeddings[i],
                     });
                 }
-                System.Threading.Thread.Sleep(2000);
             }
 
             _logger.LogInformation("Embedding created");
