@@ -19,8 +19,8 @@ builder.Services.AddControllersWithViews();
 var settings = new SearchSettings();
 builder.Configuration.GetSection("SearchSettings").Bind(settings);
 var elasticsearchClientSettings = new ElasticsearchClientSettings(new Uri(settings.ElasticSettings.Url))
-    .DefaultIndex(settings.ElasticSettings.Index)
-    .Authentication(new ApiKey(settings.ElasticSettings.ApiKey));
+    .DefaultIndex(settings.ElasticSettings.Index);
+    //.Authentication(new ApiKey(settings.ElasticSettings.ApiKey));
 
 builder.Services.AddSingleton<Kernel>(s =>
 {
@@ -33,7 +33,11 @@ builder.Services.AddSingleton<Kernel>(s =>
     return kernelBuilder.Build();
 });
 
-
+builder.Services.AddSingleton<ElasticsearchClient>(s =>
+{
+    return new ElasticsearchClient(elasticsearchClientSettings);
+});
+builder.Services.AddSingleton<ISearchSettings>(settings);
 
 var app = builder.Build();
 

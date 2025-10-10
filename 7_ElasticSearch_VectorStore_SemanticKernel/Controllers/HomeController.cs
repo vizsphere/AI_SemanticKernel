@@ -1,4 +1,5 @@
 using _7_ElasticSearch_VectorStore_SemanticKernel.Models;
+using Elastic.Clients.Elasticsearch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.VectorData;
 using Microsoft.SemanticKernel;
@@ -24,15 +25,19 @@ namespace _7_ElasticSearch_VectorStore_SemanticKernel.Controllers
         private readonly ITextGenerationService _textGenerationService;
         private readonly ITextEmbeddingGenerationService _textEmbeddingGenerationService;
         private readonly IVectorStoreRecordCollection<string, Speaker> _vectorStoreRecordCollection;
-        public HomeController(Kernel kernel, ILogger<HomeController> logger)
-        {
+        private readonly ElasticsearchClient _elasticsearch;
+        private readonly ISearchSettings _searchSettings;
 
+        public HomeController(Kernel kernel, ElasticsearchClient elasticsearch, ISearchSettings searchSettings, ILogger<HomeController> logger)
+        {
+            
             _kernel = kernel;
             _chatCompletionService = _kernel.GetRequiredService<IChatCompletionService>();
             _textGenerationService = _kernel.GetRequiredService<ITextGenerationService>();
             _textEmbeddingGenerationService = _kernel.GetRequiredService<ITextEmbeddingGenerationService>();
             _vectorStoreRecordCollection = _kernel.GetRequiredService<IVectorStoreRecordCollection<string, Speaker>>();
-
+            _elasticsearch = elasticsearch;
+            _searchSettings = searchSettings;
             _logger = logger;
         }
 
@@ -44,24 +49,41 @@ namespace _7_ElasticSearch_VectorStore_SemanticKernel.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(SearchTerms terms)
         {
-            var response = await _kernel.InvokePromptAsync($"{terms.Input} {{Name}} {{Bio}} {{WebSite}}",
-                arguments: new KernelArguments
-                {
-                    { "question", terms.Input },
-                },
-                templateFormat: "handlebars",
-                promptTemplateFactory: new HandlebarsPromptTemplateFactory());
+            var query = await _textEmbeddingGenerationService.GenerateEmbeddingsAsync(new[] { terms.Input });
 
-            terms.Response = response.ToString();
+            var response = await QueryVectorData(query[0]);
+
+            if (response.ApiCallDetails.HasSuccessfulStatusCode)
+            {
+                terms.Response = response != null && response.Documents.Any() ?
+                    string.Join("\n\n", response.Documents.Select(d => $"{d.Name} ({d.WebSite}): {d.Bio}")) :
+                    "No results found.";
+            }
 
             return View(terms);
+        }
+
+        private async Task<SearchResponse<Speaker>> QueryVectorData(ReadOnlyMemory<float> queryVector)
+        {
+            
+            var response = await _elasticsearch.SearchAsync<Speaker>(s => s
+            .Index(_searchSettings.ElasticSettings.Index)
+                .Knn(k => k
+                .Field(f => f.DefinitionEmbedding) 
+                .QueryVector(queryVector.ToArray())
+                .k(5)                        // Number of nearest neighbours to return
+                .NumCandidates(10)           // Number of candidates to consider
+                )
+           );
+
+            return response;
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateEmbedding()
         {
             _logger.LogInformation("Creating Index");
-            await _vectorStoreRecordCollection.CreateCollectionIfNotExistsAsync();
+            //await _vectorStoreRecordCollection.CreateCollectionIfNotExistsAsync();
 
             var speakers = (await System.IO.File.ReadAllLinesAsync("speakers.csv"))
                 .Select(x => x.Split(';'));

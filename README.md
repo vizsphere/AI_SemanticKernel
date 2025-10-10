@@ -55,7 +55,12 @@ _
 
 
 ## Elastic Search with Semantic Kernel
- 
+ Elastic search
+http://localhost:9200/
+
+Kibana
+http://localhost:5601/
+
 
 ```
 

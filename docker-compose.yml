@@ -1,0 +1,6 @@
+services:
+  7_elasticsearch_vectorstore_semantickernel:
+    image: ${DOCKER_REGISTRY-}7elasticsearchvectorstoresemantickernel
+    build:
+      context: 7_ElasticSearch_VectorStore_SemanticKernel
+      dockerfile: Dockerfile
