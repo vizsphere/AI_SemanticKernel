@@ -58,7 +58,7 @@ Update `appsettings.json` with your settings:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/elasticsearch-vectorsearch-semantickernel.git
+git clone https://github.com/vizsphere/AI_SemanticKernel.git
 cd elasticsearch-vectorsearch-semantickernel
 ```
 
