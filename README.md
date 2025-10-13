@@ -1,6 +1,6 @@
 # AI using Semantickernel 
 
-This repository contains a sample application that demonstrates how to use Semantic Kernel with various AI models and vector databases. The application allows users to interact with speaker data using natural language queries.
+This repository contains a sample application that demonstrates how to use Semantic Kernel with various AI models and vector databases. The applications allows users to interact with speaker data using natural language queries.
 
 ### Prerequisites
 - .NET 9.0 SDK you can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
