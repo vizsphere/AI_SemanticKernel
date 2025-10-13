@@ -70,7 +70,7 @@ docker-compose up -d
 This will start:
 - Elasticsearch on `http://localhost:9200`
 - Kibana on `http://localhost:5601`
-- Application on `http://localhost:8080`
+- Application on `[https://localhost:7026]`
 
 ### 3. Verify Elasticsearch is running
 ```bash
