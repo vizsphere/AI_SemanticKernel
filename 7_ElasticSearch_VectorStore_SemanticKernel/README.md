@@ -58,7 +58,7 @@ Update `appsettings.json` with your settings:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/elasticsearch-vectorsearch-semantickernel.git
+git clone https://github.com/vizsphere/AI_SemanticKernel.git
 cd elasticsearch-vectorsearch-semantickernel
 ```
 
@@ -70,7 +70,7 @@ docker-compose up -d
 This will start:
 - Elasticsearch on `http://localhost:9200`
 - Kibana on `http://localhost:5601`
-- Application on `http://localhost:8080`
+- Application on `[https://localhost:7026]`
 
 ### 3. Verify Elasticsearch is running
 ```bash
@@ -83,7 +83,7 @@ dotnet run
 ```
 
 ### 5. Create embeddings
-- Navigate to `http://localhost:8080`
+- Navigate to `https://localhost:7026`
 - Click the **"CreateEmbedding"** button
 - Wait for the batch processing to complete
 
@@ -253,6 +253,11 @@ GET /speaker_vector_index/_search
 }
 
 ```
+
+
+<img width="3654" height="1738" alt="image" src="https://github.com/user-attachments/assets/06e47291-ccc1-439b-ae42-104b6733a582" />
+
+<img width="3836" height="2059" alt="image" src="https://github.com/user-attachments/assets/76358ed7-c4cd-4360-897b-4908b0db4407" />
 
 
 
