@@ -19,7 +19,8 @@ builder.Services.AddControllersWithViews();
 var settings = new SearchSettings();
 builder.Configuration.GetSection("SearchSettings").Bind(settings);
 var elasticsearchClientSettings = new ElasticsearchClientSettings(new Uri(settings.ElasticSettings.Url))
-    .DefaultIndex(settings.ElasticSettings.Index);
+    .DefaultIndex(settings.ElasticSettings.Index)
+    .DisableDirectStreaming(true);
     //.Authentication(new ApiKey(settings.ElasticSettings.ApiKey));
 
 builder.Services.AddSingleton<Kernel>(s =>
