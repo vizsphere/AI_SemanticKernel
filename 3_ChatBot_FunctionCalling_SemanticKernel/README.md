@@ -51,4 +51,4 @@ The AI automatically determines which function to call based on user intent.
 
 ## Learn More
 
-Read the full blog post: [Link to your blog]
+Read the full blog post: [here](https://vizsphere.com/building-intelligent-chatbots-with-semantic-kernel-function-calling/)

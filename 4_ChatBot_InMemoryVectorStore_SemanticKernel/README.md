@@ -111,4 +111,6 @@ await foreach (var result in results.Results)
 
 ## 📚 Learn More
 
-- [Full Blog Post](#) - Deep dive into implementation
+Read the full blog post: [here](https://vizsphere.com/semantic-kernel-and-in-memory-vector-store/)
+
+

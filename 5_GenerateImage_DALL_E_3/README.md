@@ -5,11 +5,10 @@ An interactive ASP.NET Core MVC application that demonstrates the power of Micro
 ## 🎮 What It Does
 
 1. Takes a user's text prompt
-2. Generates an AI-enhanced image description using GPT-4
-3. Creates an image with DALL-E 3
-4. Asks the user to guess what the image represents
-5. Compares the guess with the original description using embeddings
-6. Displays a similarity score based on semantic meaning (not exact word matching)
+2. Creates an image with DALL-E 3
+3. Asks the user to guess what the image represents
+4. Compares the guess with the original description using embeddings
+5. Displays a similarity score based on semantic meaning (not exact word matching)
 
 ## 🚀 Key Features
 
@@ -111,3 +110,6 @@ The app uses **embeddings** to understand meaning:
 └── Program.cs                 # App configuration
 ```
 
+## 📚 Learn More
+
+Read the full blog post: [here](https://vizsphere.com/image-generation-with-dall-e-3/)

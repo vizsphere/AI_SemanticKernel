@@ -113,3 +113,7 @@ With Semantic Kernel:
 Semantic Kernel democratizes AI for C# developers. You don't need a deep knowledge of machine learning to build intelligent applications—just a solid understanding of these core concepts and how to wire them together.
 
 Start building your AI-powered .NET applications today!
+
+## Learn More
+
+Read the full blog post: [here](https://vizsphere.com/understanding-semantic-kernel-in-c-building-an-ai-assistant/)

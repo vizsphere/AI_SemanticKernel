@@ -261,5 +261,8 @@ Increase Docker memory or adjust heap size in `docker-compose.override.yml`
 
 
 
+## 📚 Learn More
+
+Read the full blog post: [here](https://vizsphere.com/building-a-vector-search-application-with-semantic-kernel-and-elasticsearch/)
 
 
