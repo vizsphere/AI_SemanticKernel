@@ -196,6 +196,66 @@ netstat -an | findstr "9200"
 http://YourIpAddress:9200
 ```
 
+### Elastic Search and Kibana running in Docker
+
+
+```
+
+Elastic search
+---------------
+http://localhost:9200/
+
+
+Kibana
+---------------
+http://localhost:5601/
+```
+
+### Create an index in Elastic Search
+
+```
+
+PUT speaker_vector_index
+{
+  "mappings": {
+    "properties": {
+      "DefinitionEmbedding": {
+        "type": "dense_vector",
+        "dims": 1536,
+        "index": true
+      },
+      "Id": {
+        "type": "keyword"
+      },
+      "Name": {
+        "type": "text"
+      },
+      "Bio": {
+        "type": "text"
+      },
+      "WebSite": {
+        "type": "text"
+      }
+    }
+  }
+}
+
+```
+
+### Search the index
+```
+
+GET /speaker_vector_index/_search
+{
+  "query": {
+    "match_all": {}
+   }
+}
+
+```
+
+
+
 ### Out of memory
 Increase Docker memory or adjust heap size in `docker-compose.override.yml`
 
