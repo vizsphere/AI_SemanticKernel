@@ -83,7 +83,7 @@ dotnet run
 ```
 
 ### 5. Create embeddings
-- Navigate to `http://localhost:8080`
+- Navigate to `https://localhost:7026`
 - Click the **"CreateEmbedding"** button
 - Wait for the batch processing to complete
 
