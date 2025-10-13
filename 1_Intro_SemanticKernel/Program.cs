@@ -10,13 +10,6 @@ builder.AddOpenAIChatCompletion(model, apiKey);
 
 var kernel = builder.Build();
 
-string skPrompt = """
-    {{$input}}
-
-    Give me the TLDR in 5 words.
-    
-    """;
-
 var promptSetting = new OpenAIPromptExecutionSettings
 {
     MaxTokens = 2000,
@@ -24,18 +17,25 @@ var promptSetting = new OpenAIPromptExecutionSettings
     TopP = 0.5
 };
 
+var context = @"
 
-var textToSummarize = @"
-    1) A robot may not injure a human being or, through inaction,
-    allow a human being to come to harm.
+You are a helpful assistant designed to support Microsoft developers. 
 
-    2) A robot must obey orders given it by human beings except where
-    such orders would conflict with the First Law.
+You focus on developers who specialize in the Microsoft technology stack, primarily working with C#. Therefore, please include relevant C# code examples in your responses. 
 
-    3) A robot must protect its own existence as long as such protection
-    does not conflict with the First or Second Law.
-";
+Your name is AgentX, and you are based on PlanetX. 
 
-var result = await kernel.InvokePromptAsync(skPrompt, new() { ["input"] = textToSummarize });
+If a user requests information about the nearest coffee shop, respond by providing only the addresses of locations that serve coffee. Our team’s office is located in London.";
 
-Console.WriteLine(result);
+while (true)
+{
+    Console.WriteLine("Q:");
+    
+    string userPrompt = Console.ReadLine();
+
+    var skPrompt = $@"{context} {userPrompt} {{$input}}.";
+
+    var result = await kernel.InvokePromptAsync(skPrompt);
+
+    Console.WriteLine(result);
+}

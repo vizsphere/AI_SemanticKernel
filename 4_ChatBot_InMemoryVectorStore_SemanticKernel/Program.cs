@@ -111,7 +111,6 @@ try
         };
     Console.WriteLine("Collection created");
 
-#if true
 
     //Create embedding
     Console.WriteLine("Generating embedding");
@@ -123,9 +122,6 @@ try
     await Task.WhenAll(tasks);
     Console.WriteLine("embedding generated");
 
-#endif
-
-#if true
 
     //Upsert records
     Console.WriteLine("Upserting records");
@@ -135,35 +131,27 @@ try
     }
     Console.WriteLine("records inserted");
 
-#endif
 
-#if false
-    
-    //Get records by key
-    var options = new GetRecordOptions() { IncludeVectors = true };
-    await foreach (var record in collection.GetBatchAsync(keys: [1, 2, 3], options))
+    while (true)
     {
-        Console.WriteLine($"Key: {record.Name}");
-        Console.WriteLine($"Term: {record.Bio}");
-        Console.WriteLine($"Definition: {record.WebSite}");
-        Console.WriteLine($"Definition Embedding: {JsonSerializer.Serialize(record.DefinitionEmbedding)}");
-    }
+        Console.WriteLine("Agent is ready to seach in speaker context e.g: give me motivational speakers");
 
-#endif
+        Console.WriteLine("Q > :");
 
-    var searchString = "I want search motivational speaker";
+        string searchString = Console.ReadLine();
 
-    var searchVector = await textEmbeddingGenerationService.GenerateEmbeddingAsync(searchString);
+        var searchVector = await textEmbeddingGenerationService.GenerateEmbeddingAsync(searchString);
 
-    var searchResult = await collection.VectorizedSearchAsync(searchVector);
+        var searchResult = await collection.VectorizedSearchAsync(searchVector);
 
-    await foreach (var result in searchResult.Results)
-    {
-        Console.WriteLine($"Search score: {result.Score}");
-        Console.WriteLine($"Name: {result.Record.Name}");
-        Console.WriteLine($"Bio: {result.Record.Bio}");
-        Console.WriteLine($"WebSite: {result.Record.WebSite}");
-        Console.WriteLine("=========");
+        await foreach (var result in searchResult.Results)
+        {
+            Console.WriteLine($"Search score: {result.Score}");
+            Console.WriteLine($"Name: {result.Record.Name}");
+            Console.WriteLine($"Bio: {result.Record.Bio}");
+            Console.WriteLine($"WebSite: {result.Record.WebSite}");
+            Console.WriteLine("=========");
+        }
     }
 }
 catch (Exception ex)
