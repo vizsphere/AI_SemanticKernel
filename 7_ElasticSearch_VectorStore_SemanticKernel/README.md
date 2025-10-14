@@ -1,6 +1,6 @@
 ﻿# Elasticsearch Vector Search with Semantic Kernel
 
-A production-ready ASP.NET Core MVC application demonstrating semantic search using Elasticsearch as a vector database, powered by Microsoft Semantic Kernel and Azure OpenAI embeddings.
+An ASP.NET Core MVC application demonstrating semantic search using Elasticsearch as a vector database, powered by Microsoft Semantic Kernel and Azure OpenAI embeddings.
 
 ## 🚀 Features
 
