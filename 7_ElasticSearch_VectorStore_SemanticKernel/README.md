@@ -255,9 +255,10 @@ GET /speaker_vector_index/_search
 ```
 
 
-<img width="3654" height="1738" alt="image" src="https://github.com/user-attachments/assets/06e47291-ccc1-439b-ae42-104b6733a582" />
+![Kibana](https://github.com/user-attachments/assets/fb7987aa-e22e-4ec4-8815-3a62a295787b)
 
-<img width="3836" height="2059" alt="image" src="https://github.com/user-attachments/assets/76358ed7-c4cd-4360-897b-4908b0db4407" />
+
+![ElasticSearch-Web](https://github.com/user-attachments/assets/c84e5019-f4c6-46cc-b88f-8f248d4795de)
 
 
 
