@@ -10,6 +10,7 @@ This repository contains a sample application that demonstrates how to use Seman
 - Git. You can download it from [here](https://git-scm.com/downloads).
 - Docker Desktop. You can download it from [here](https://www.docker.com/products/docker-desktop/).
 
+<img width="1536" height="1024" alt="Intro" src="https://github.com/user-attachments/assets/8948b7e8-2357-4c91-8557-acc49741e73d" />
 
 ### Environment Variables
 
