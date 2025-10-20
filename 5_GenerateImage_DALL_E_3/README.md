@@ -1,4 +1,4 @@
-﻿# AI Image Generation & Semantic Similarity Game
+﻿# AI Image Generation & Semantic Similarity
 
 An interactive ASP.NET Core MVC application that demonstrates the power of Microsoft Semantic Kernel by combining multiple AI services: image generation with DALL-E 3, text embeddings, and semantic similarity comparison.
 
