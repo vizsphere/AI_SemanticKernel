@@ -2,7 +2,7 @@
 
 An interactive ASP.NET Core MVC application that demonstrates the power of Microsoft Semantic Kernel by combining multiple AI services: image generation with DALL-E 3, text embeddings, and semantic similarity comparison.
 
-## 🎮 What It Does
+##  What It Does
 
 1. Takes a user's text prompt
 2. Creates an image with DALL-E 3
@@ -87,7 +87,7 @@ The app uses **embeddings** to understand meaning:
 - "bird flying over water" vs "seagull at the beach" = High similarity ✅
 - "bird flying over water" vs "car racing" = Low similarity ❌
 
-## 🏃 Running the Application
+##  Running the Application
 
 1. Clone the repository
 2. Configure your OpenAI API keys (see Configuration section)
