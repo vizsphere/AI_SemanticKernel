@@ -2,6 +2,9 @@
 
 An interactive ASP.NET Core MVC application that demonstrates the power of Microsoft Semantic Kernel by combining multiple AI services: image generation with DALL-E 3, text embeddings, and semantic similarity comparison.
 
+
+![Kibana](https://github.com/user-attachments/assets/77650b6e-211a-4a2b-a047-402fabb5b495)
+
 ##  What It Does
 
 1. Takes a user's text prompt
@@ -26,6 +29,7 @@ An interactive ASP.NET Core MVC application that demonstrates the power of Micro
   - DALL-E 3 for image generation
   - text-embedding-3-small for embeddings
 - **System.Numerics.Tensors** for vector operations
+  
 
 ## 📦 NuGet Packages
 
