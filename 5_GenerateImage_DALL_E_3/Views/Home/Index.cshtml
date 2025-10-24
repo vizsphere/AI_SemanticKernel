@@ -13,7 +13,8 @@
                 
                 <div>
                     <span class="label label-primary">User random guess about image</span>
-                    <input asp-for="UserGuess" value="Ice cream" maxlength="90" class="form-control" />
+                    <input asp-for="UserGuess" value="@Model.UserGuess" maxlength="90" class="form-control"  required />
+                    <span class="text-muted">Try to guess what the image looks like!</span>
                 </div>
                 
             </div>

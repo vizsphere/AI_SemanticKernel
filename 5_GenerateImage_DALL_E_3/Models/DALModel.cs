@@ -10,7 +10,7 @@
 
         public string OriginalImageDescription { get; set; }
 
-        public string UserGuess { get; set; }
+        public string UserGuess { get; set; } 
 
         public float SimilarityScore { get; set; }
 

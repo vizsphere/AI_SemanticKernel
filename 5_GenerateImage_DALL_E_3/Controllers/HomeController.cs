@@ -73,7 +73,7 @@ namespace _5_GenerateImage_DALL_E_3.Controllers
             var similarity = TensorPrimitives.CosineSimilarity(origVector.Span, guessVector.Span);
 
             model.SimilarityScore = similarity;
-
+            model.UserGuess = guess;
             model.GuessDescription = $"{Utils.WordWrap(model.UserGuess, 90)}\n";
             model.OriginalImageDescription = $"{Utils.WordWrap(model.OriginalImageDescription, 90)}\n";
 
