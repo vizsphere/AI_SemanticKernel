@@ -15,8 +15,7 @@ The AI automatically calls C# methods to search and retrieve speaker information
 
 ✅ Automatic function invocation  
 ✅ Natural language to method calls  
-✅ No complex prompt engineering  
-✅ Clean, maintainable code  
+
 
 ## Quick Start
 

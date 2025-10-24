@@ -10,6 +10,9 @@ This repository contains a sample application that demonstrates how to use Seman
 - Git. You can download it from [here](https://git-scm.com/downloads).
 - Docker Desktop. You can download it from [here](https://www.docker.com/products/docker-desktop/).
 
+  
+
+
 
 ### Environment Variables
 
@@ -41,6 +44,8 @@ You need to set the following environment variables in your system:
 ```
 echo $Env:AZURE_OPEN_AI_APIKEY
 ```
+
+<img width="100" height="100" alt="Intro-small" src="https://github.com/user-attachments/assets/1472b0ef-b185-4641-b8c9-4b0b85bd0c36" />
 
 
 
