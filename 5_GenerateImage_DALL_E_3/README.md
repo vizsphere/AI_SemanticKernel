@@ -114,6 +114,3 @@ The app uses **embeddings** to understand meaning:
 └── Program.cs                 # App configuration
 ```
 
-## 📚 Learn More
-
-Read the full blog post: [here](https://vizsphere.com/image-generation-with-dall-e-3/)
