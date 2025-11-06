@@ -109,8 +109,4 @@ await foreach (var result in results.Results)
 5. Results are returned ranked by relevance
 
 
-## 📚 Learn More
-
-Read the full blog post: [here](https://vizsphere.com/semantic-kernel-and-in-memory-vector-store/)
-
 
