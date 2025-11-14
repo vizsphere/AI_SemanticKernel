@@ -2,6 +2,12 @@
 
 An ASP.NET Core MVC application demonstrating semantic search using Elasticsearch as a vector database, powered by Microsoft Semantic Kernel and Azure OpenAI embeddings.
 
+![Kibana](https://github.com/user-attachments/assets/fb7987aa-e22e-4ec4-8815-3a62a295787b)
+
+
+![ElasticSearch-Web](https://github.com/user-attachments/assets/c84e5019-f4c6-46cc-b88f-8f248d4795de)
+
+
 ## 🚀 Features
 
 - **Vector Embeddings Generation** - Converts text data into 1536-dimensional embeddings using Azure OpenAI
@@ -255,10 +261,6 @@ GET /speaker_vector_index/_search
 ```
 
 
-![Kibana](https://github.com/user-attachments/assets/fb7987aa-e22e-4ec4-8815-3a62a295787b)
-
-
-![ElasticSearch-Web](https://github.com/user-attachments/assets/c84e5019-f4c6-46cc-b88f-8f248d4795de)
 
 
 
